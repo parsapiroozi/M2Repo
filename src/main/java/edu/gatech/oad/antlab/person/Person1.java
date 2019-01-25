@@ -43,7 +43,8 @@ public class Person1 {
 	 *         object
 	 */
 	public String toString(String input) {
-	  return name + calc(input);
+	  return name +
+		  calc(input);
 	}
 
 }
