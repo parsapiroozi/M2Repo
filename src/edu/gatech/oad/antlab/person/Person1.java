@@ -40,6 +40,7 @@ public class Person1 {
 		  } else {
 			  input.charAt(i - 2) = temp.charAt(i);
 		  }
+	  }
 	  return input;
 	}
 	
