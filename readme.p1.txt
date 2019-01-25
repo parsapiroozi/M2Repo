@@ -1,1 +1,2 @@
-Sidhant Bhatia sbhatia61@gatech.edu
+Sidhant Bhatia 
+sbhatia61@gatech.edu
