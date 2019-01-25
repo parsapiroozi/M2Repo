@@ -3,57 +3,60 @@ package edu.gatech.oad.antlab.person;
 /**
  *  A simple class for person 1
  *  returns their name and a
- *  modified string 
- *  
+ *  modified string
+ *
  *  @author Bob
  *  @version 1.1
  */
 public class Person1 {
-  /** Holds the persons real name */
-  private String name;
-  	/**
-	 * The constructor, takes in the persons
-	 * name
-	 * @param pname the person's real name
-	 */
-  public Person1(String pname) {
-    name = pname;
-  }
-  	/**
-	 * This method should take the string
-	 * input and return its characters rotated
-	 * 2 positions.
-	 * given "gtg123b" it should return
-	 * "g123bgt".
-	 *
-	 * @param input the string to be modified
-	 * @return the modified string
-	 */
-	private String calc(String input) {
-	  //Person 1 put your implementation here
-	  String temp = input;
-	  for(int i = input.length() - 1; i >= 0; i--) {
-		  if(i == 0) {
-			  input.charAt(input.length() - 2) = temp.charAt(0);
-		  } else if (i == 1) {
-			  input.charAt(input.length() - 1) = temp.charAt(1);
-		  } else {
-			  input.charAt(i - 2) = temp.charAt(i);
-		  }
-	  }
-	  return input;
-	}
-	
-	/**
-	 * Return a string rep of this object
-	 * that varies with an input string
-	 *
-	 * @param input the varying string
-	 * @return the string representing the 
-	 *         object
-	 */
-	public String toString(String input) {
-	  return name + calc(input);
-	}
+    /** Holds the persons real name */
+    private String name;
+    /**
+     * The constructor, takes in the persons
+     * name
+     * @param pname the person's real name
+     */
+    public Person1(String pname) {
+        name = pname;
+    }
+    /**
+     * This method should take the string
+     * input and return its characters rotated
+     * 2 positions.
+     * given "gtg123b" it should return
+     * "g123bgt".
+     *
+     * @param input the string to be modified
+     * @return the modified string
+     */
+    private String calc(String input) {
+        //Person 1 put your implementation here
+        String temp = input;
+        for(int i = input.length() - 1; i >= 0; i--) {
+            if (i == 0) {
+                input += temp.charAt(0);
+            } else if (i == 1) {
+                input += temp.charAt(1);
+            } else {
+                input += temp.charAt(i);
+            }
+
+        }
+
+            return input;
+
+    }
+
+        /**
+         * Return a string rep of this object
+         * that varies with an input string
+         *
+         * @param input the varying string
+         * @return the string representing the
+         *         object
+         */
+    public String toString(String input) {
+        return name + calc(input);
+    }
 
 }
