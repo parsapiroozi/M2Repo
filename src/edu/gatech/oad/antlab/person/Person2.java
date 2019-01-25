@@ -1,5 +1,10 @@
 package edu.gatech.oad.antlab.person;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 /**
  *  A simple class for person 2
  *  returns their name and a
@@ -11,6 +16,7 @@ package edu.gatech.oad.antlab.person;
 public class Person2 {
     /** Holds the persons real name */
     private String name;
+
 	 	/**
 	 * The constructor, takes in the persons
 	 * name
@@ -30,8 +36,15 @@ public class Person2 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-	  //Person 2 put your implementation here
-	  return null;
+	  	// Person 2 put your implementation here
+		List<String> temp = Arrays.asList(input.split(""));
+		Collections.shuffle(temp);
+
+		String out = "";
+		for(String s : temp)
+			out += s;
+
+		return out;
 	}
 	/**
 	 * Return a string rep of this object
